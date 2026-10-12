@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Babyyy 💗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink: #ff8eae;
+  --light-pink: #fff0f5;
+  --red: #df315f;
+  --dark-red: #b91e49;
+  --white: #ffffff;
+  --text: #673345;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(-45deg,#fff0f5,#ffdce8,#fff8fb,#ffcbdc,#fff0f5);
+  background-size: 400% 400%;
+  animation: dreamyBackground 15s ease infinite;
+}
+@keyframes dreamyBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 10% 20%,#ff80aa33,transparent 30%),radial-gradient(circle at 90% 75%,#ff426e25,transparent 32%),radial-gradient(circle at 50% 50%,#ffffff65,transparent 55%);
+}
+#decorations {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 5;
+}
+.floating-decoration {
+  position: absolute;
+  bottom: -50px;
+  opacity: 0;
+  animation: floatUp linear forwards;
+  filter: drop-shadow(0 0 8px #ff8eb855);
+}
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0deg) scale(.7); opacity: 0; }
+  15% { opacity: .75; }
+  80% { opacity: .65; }
+  100% { transform: translateY(-115vh) rotate(35deg) scale(1.2); opacity: 0; }
+}
+.container {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 32px,850px);
+  margin: auto;
+}
+.script { font-family: 'Dancing Script',cursive; }
+.eyebrow {
+  color: var(--red);
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+h1,h2,h3 { line-height: 1.25; }
+h1 { font-size: clamp(36px,8vw,66px); color: var(--dark-red); }
+h2 { font-size: clamp(30px,6vw,45px); color: var(--dark-red); }
+p { line-height: 1.85; }
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  transition: transform .3s ease,box-shadow .3s ease;
+}
+button:hover { transform: translateY(-3px); box-shadow: 0 10px 30px #d9366440; }
+button:active { transform: scale(.97); }
+.primary-button {
+  padding: 15px 27px;
+  border-radius: 50px;
+  background: linear-gradient(135deg,#ff719b,#df315f);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 8px 25px #df315f35;
+}
+.secondary-button {
+  padding: 14px 24px;
+  border-radius: 50px;
+  color: var(--dark-red);
+  background: #ffffffcf;
+  border: 1px solid #f3b4c9;
+  font-size: 14px;
+  font-weight: 700;
+}
+.heart-divider {
+  margin: 23px 0;
+  color: #e95681;
+  letter-spacing: 12px;
+  font-size: 17px;
+}
+#intro {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(145deg,#fff4f8ed,#ffd9e8f2,#fff5f8ed);
+  backdrop-filter: blur(12px);
+  transition: opacity .8s ease,visibility .8s ease;
+}
+#intro.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.intro-card {
+  width: min(100%,540px);
+  padding: 45px 25px;
+  border: 1px solid #ffffffd9;
+  border-radius: 32px;
+  background: #ffffffa6;
+  box-shadow: 0 20px 70px #bc45651c;
+  animation: cardAppear 1s ease both;
+}
+@keyframes cardAppear {
+  from { opacity: 0; transform: translateY(25px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.big-heart {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 55px;
+  animation: heartbeat 1.8s infinite;
+  filter: drop-shadow(0 4px 14px #ff709755);
+}
+@keyframes heartbeat {
+  0%,100% { transform: scale(1); }
+  15% { transform: scale(1.12); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.08); }
+}
+.intro-card h1 { margin: 15px 0; }
+.intro-card .message {
+  margin: 15px auto 25px;
+  max-width: 370px;
+  color: #865366;
+  font-size: 15px;
+}
+#surprise { display: none; padding-bottom: 45px; }
+.hero { padding: 85px 0 45px; }
+.hero .eyebrow { margin-bottom: 20px; }
+.hero h1 { margin: 14px 0; text-shadow: 0 4px 25px #e45a8220; }
+.hero .script {
+  margin-top: 12px;
+  color: #d93664;
+  font-size: clamp(29px,6vw,43px);
+}
+.hero .subtitle {
+  max-width: 540px;
+  margin: 18px auto 0;
+  font-size: 15px;
+  color: #865366;
+}
+.glowing-heart {
+  display: inline-block;
+  color: #e83e6e;
+  margin: 24px 0 0;
+  font-size: 28px;
+  animation: heartbeat 1.8s infinite;
+  filter: drop-shadow(0 0 12px #ff709788);
+}
+.photo-section { padding: 35px 0 55px; }
+.photo-section .description {
+  max-width: 460px;
+  margin: 12px auto 25px;
+  font-size: 14px;
+  color: #865366;
+}
+.photo-frame {
+  width: min(100%,560px);
+  margin: 25px auto 0;
+  padding: 9px;
+  border-radius: 26px;
+  background: linear-gradient(135deg,#f6c5d7,#ffffff,#e9a5bf);
+  box-shadow: 0 0 24px #ffb6cf55,0 18px 50px #c45c8120;
+  animation: photoGlow 4s ease-in-out infinite;
+}
+@keyframes photoGlow {
+  0%,100% { box-shadow: 0 0 20px #ffb6cf55,0 18px 50px #c45c8120; }
+  50% { box-shadow: 0 0 34px #ff82ae77,0 18px 55px #c45c8130; }
+}
+.photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 19px;
+  background: #fff7fa;
+}
+.photo-caption { margin-top: 18px; color: var(--dark-red); font-size: 25px; }
+.letter-section { padding: 30px 0 60px; }
+.letter-card {
+  position: relative;
+  max-width: 680px;
+  margin: 25px auto 0;
+  padding: clamp(25px,6vw,48px);
+  text-align: left;
+  border: 1px solid #ffffffed;
+  border-radius: 25px;
+  background: #ffffffb8;
+  box-shadow: 0 15px 50px #b43c5c12;
+  backdrop-filter: blur(8px);
+}
+.letter-card::before {
+  content: "♡";
+  position: absolute;
+  top: 12px;
+  right: 22px;
+  color: #f3a2bd;
+  font-family: 'Dancing Script',cursive;
+  font-size: 46px;
+}
+.letter-card h3 {
+  margin-bottom: 20px;
+  color: var(--dark-red);
+  font-family: 'Dancing Script',cursive;
+  font-size: 35px;
+}
+.letter-card p { margin: 13px 0; color: #704357; font-size: 14px; }
+.signature {
+  margin-top: 25px !important;
+  text-align: right;
+  color: var(--dark-red) !important;
+  font-family: 'Dancing Script',cursive;
+  font-size: 30px !important;
+}
+.final-section { padding: 35px 0 60px; }
+.final-section h2 { margin: 15px 0; }
+.final-section .final-message {
+  max-width: 490px;
+  margin: 12px auto 25px;
+  color: #865366;
+  font-size: 14px;
+}
+.hug-message {
+  display: none;
+  margin: 25px auto 0;
+  color: var(--dark-red);
+  font-family: 'Dancing Script',cursive;
+  font-size: clamp(26px,6vw,38px);
+  animation: cardAppear .6s ease both;
+}
+footer {
+  position: relative;
+  z-index: 1;
+  padding: 18px 15px 30px;
+  color: #a46a80;
+  font-size: 12px;
+}
+footer span { color: #df315f; }
+@media (max-width: 600px) {
+  .hero { padding-top: 65px; }
+  .intro-card { padding: 35px 20px; }
+  .photo-frame { padding: 7px; border-radius: 20px; }
+  .photo-frame img { border-radius: 14px; }
+  .letter-card { border-radius: 21px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,*::before,*::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Background music: keep love-song.mp3 in the same folder -->
+<audio id="bgMusic" loop preload="auto">
+  <source src="C:\Users\ekeer\Downloads\Hi Nanna Love Bgm.mp3" type="audio/mpeg">
+</audio>
+
+<div id="decorations"></div>
+
+<div id="intro">
+  <div class="intro-card">
+    <span class="big-heart">💗</span>
+    <p class="eyebrow">A little surprise, made with love</p>
+    <h1 class="script">For My Babyyy</h1>
+    <p class="message">
+      A tiny piece of my heart, a little pink magic,
+      and all the love I have for you. Open this, my love. 💌
+    </p>
+    <button class="primary-button" onclick="openSurprise()">Open Your Surprise 💌</button>
+    <div class="heart-divider">♡ ✦ ♡</div>
+    <p style="font-size:12px;color:#a46a80;">Made with endless love by your Gundu</p>
+  </div>
+</div>
+
+<main id="surprise">
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Today is all about you ✨</p>
+      <h1>HAPPY BIRTHDAY,<br>MY BABYYY ❤️</h1>
+      <p class="script">You make my world more beautiful.</p>
+      <p class="subtitle">
+        If I could give you one thing in this world,
+        I would give you the ability to see yourself through my eyes.
+        Only then would you understand how special you are to me. 💗
+      </p>
+      <span class="glowing-heart">♥</span>
+    </div>
+  </section>
+
+  <section class="photo-section">
+    <div class="container">
+      <p class="eyebrow">A little piece of us</p>
+      <h2 class="script">My favourite person 📸</h2>
+      <p class="description">
+        Out of all the beautiful things in this world,
+        you will always be one of my favourites.
+      </p>
+      <div class="photo-frame">
+        <!-- Put your picture in the same folder and name it our-photo.jpg C:\Users\ekeer\OneDrive\Documents\WhatsApp Image 2026-10-11 at 10.09.40 PM.jpeg-->
+        <img src="images/"
+             alt="A special picture for my Babyyy"
+             onerror="this.style.display='none';document.getElementById('photo-error').style.display='block';">
+        <p id="photo-error" style="display:none;padding:35px 12px;color:#b91e49;">
+          💗 Add your picture in the same folder as birthday.html and name it <b>our-photo.jpg</b>.
+        </p>
+      </div>
+      <p class="photo-caption script">My Babyyy, my happiness. ♡</p>
+    </div>
+  </section>
+
+  <section class="letter-section">
+    <div class="container">
+      <p class="eyebrow">From my heart to yours</p>
+      <h2 class="script">A letter for you 💌</h2>
+      <div class="letter-card">
+        <h3>My Babyyy, ❤️</h3>
+        <p>
+          Happy birthday to the person who holds such a special place
+          in my heart.
+          Asal eppudu ankoledhu oka person ki intha importance untundhi ani na life lo entha ante nitho matladakunda undalenantha pichi nuvvante, pichidhanni ani vadhileeyyaku.
+        </p>
+        <p>
+          Na mood ni midha depend ayyi untadhi baby tlsaa ah roju happy ga chat chesthe happy lekpothe dull antha alvat aipoina.
+          I Know nen uke godava chestha ani kani nuv barinchadam eh love anattu nen matram godava padthune unta nuv barinchali anthe!!
+        </p>
+        <p>
+          Never leave me iam completely into you baby chala estam nuvvante chalaaa....
+          dont want to miss you.
+          I wish you a life filled with happiness, peace, success,
+          beautiful opportunities, and every little thing your heart
+          dreams of. I hope this new year of your life brings you closer
+          to everything you wish to become.
+        </p>
+        <p>
+          On your birthday, I wish I could give you the biggest hug,
+          hold your hand, look into your eyes, and tell you how lucky
+          I feel to have you in my life. Until then, let this little
+          website carry a hug from me to you. 🫂
+        </p>
+        <p>
+          i love you the mostttt............. your my favourite person muawhhhhh!!!
+          Happy birthday again, my love. Keep smiling, keep shining,
+          and never forget that your Gundu is sending you so much love
+          today and always. 💗
+        </p>
+        <p class="signature">Forever with love,<br>Your Gundu 💋</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-section">
+    <div class="container">
+      <p class="eyebrow">One last thing, my love</p>
+      <h2 class="script">Babyyy 🥹</h2>
+      <p class="final-message">
+        If you were here right now, I would hold you close
+        and give you the warmest birthday hug ever.
+        So close your eyes for a second and imagine me right there. ❤️
+      </p>
+      <button class="primary-button" onclick="sendHug()">Sending You a Hug 🫂</button>
+      <p id="hug-message" class="hug-message">
+        Muaaahhh! 💋💕 A million hugs and kisses from your Gundu! ❤️
+      </p>
+      <div class="heart-divider">♡ ♥ ✦ ♥ ♡</div>
+      <p class="script" style="font-size:25px;color:#c93660;">
+        You will always be my Babyyy. 💗
+      </p>
+    </div>
+  </section>
+
+  <footer>Made with <span>♥</span>, a little pink magic, and endless love by Gundu.</footer>
+</main>
+
+<script>
+function openSurprise() {
+  document.getElementById("intro").classList.add("hidden");
+  document.getElementById("surprise").style.display = "block";
+
+  const music = document.getElementById("bgMusic");
+  music.volume = 0.45;
+  music.play().catch(() => {
+    console.log("Check that love-song.mp3 is in the same folder.");
+  });
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  createDecorationBurst(18);
+}
+
+const decorationSymbols = ["♡","♥","💕","✦","✨","⋆","💗"];
+
+function createDecoration() {
+  const layer = document.getElementById("decorations");
+  const item = document.createElement("span");
+  item.className = "floating-decoration";
+  item.textContent = decorationSymbols[Math.floor(Math.random() * decorationSymbols.length)];
+  item.style.left = Math.random() * 100 + "vw";
+  item.style.fontSize = (13 + Math.random() * 19) + "px";
+  item.style.animationDuration = (8 + Math.random() * 8) + "s";
+  item.style.color = Math.random() > 0.5 ? "#f05a87" : "#d93664";
+  layer.appendChild(item);
+  setTimeout(() => item.remove(),17000);
+}
+
+function createDecorationBurst(count) {
+  const layer = document.getElementById("decorations");
+  for (let i = 0; i < count; i++) {
+    const item = document.createElement("span");
+    item.className = "floating-decoration";
+    item.textContent = decorationSymbols[Math.floor(Math.random() * decorationSymbols.length)];
+    item.style.left = (10 + Math.random() * 80) + "vw";
+    item.style.bottom = (Math.random() * 35) + "vh";
+    item.style.fontSize = (18 + Math.random() * 22) + "px";
+    item.style.animationDuration = (5 + Math.random() * 5) + "s";
+    item.style.color = Math.random() > 0.5 ? "#f05a87" : "#d93664";
+    layer.appendChild(item);
+    setTimeout(() => item.remove(),11000);
+  }
+}
+
+setInterval(createDecoration,500);
+
+function sendHug() {
+  const message = document.getElementById("hug-message");
+  message.style.display = "block";
+  createDecorationBurst(35);
+  message.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+</script>
+</body>
+</html>
